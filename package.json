@@ -10,5 +10,8 @@
   "keywords": [],
   "author": "Andy",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
 }
