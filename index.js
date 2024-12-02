@@ -29,6 +29,14 @@ app.get("/", (req, res) => {
 
 //! definisco rotta bacheca
 app.get("/bacheca", (req, res) => {
+  res.json({
+    posts: ImportPosts.posts,
+    counter: ImportPosts.posts.length,
+  });
+});
+
+//! bonus filter
+app.get("/bacheca", (req, res) => {
   if (req.query?.tag != null) {
     const response = ImportPosts.posts?.filter((obj) =>
       obj.tags.some((tag) => tag == req.query.tag)
